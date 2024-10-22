@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color: whitesmoke;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,#EDBFFF,#fff);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #edbfff;
+    z-index: 9;
+    mix-blend-mode: difference;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size: cover;
+}
+
+.main{
+    background-color: #000000;
+    cursor: none;
+}
+
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding-top: 12vw;
+}
+
+#nav{
+    height: 55px;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 99;
+}
+
+#nav img{
+    height: 180px;
+    padding-top: 50px;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#nav-part3{
+    display: flex;
+    gap: 40px;
+}
+
+#nav a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#nav i {
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+#nav #circle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#nav h4{
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#nav h4:nth-child(1){
+    text-decoration: underline;
+}
+
+.page1 h1{
+    font-size: 7vw;
+    font-family: PP mori;
+    font-weight: 300;
+    margin-left: 6vw;
+}
+.page1 h2{
+    font-size: 7vw;
+    font-family: PP mori;
+    font-weight: 300;
+    margin-left: 29vw;
+}
+
+.page1 video{
+    width: 60%;
+    margin-top: 10vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid #6c6c6c;
+    position: relative;
+    z-index: 9;
+}
+
+.page2 h1{
+    font-size:7vw;
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+
+.page2-container{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page2-left{
+    width: 38%;
+}
+.page2-right{
+    width: 24%;
+}
+.page2-left h2{
+    font-size: 4vw;
+    font-weight: 300;
+    color: #111;
+    line-height: 4vw;
+}
+.page2-right p{
+    font-size: 28px;
+    color: #111;
+}
+
+.page2-left h2::selection{
+    color: #111;
+    background-color: #EDBFFF;
+
+}
+
+.page2-right p::selection{
+    color: #111;
+    background-color: #EDBFFF;
+}
+
+.page2-right button{
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 4px 0;
+    background-color: #EDBFFF;
+    color: #111;
+    margin-top: 20px;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 8vw 0;
+    position: relative;
+}
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.con h1{
+    color: #000;
+}
+
+#moving-text h1 {
+    font-size: 5vw;
+    display: inline-block;
+}
+
+#gola {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #EDBFFF;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid #6c6c6c;
+    position: relative;
+    z-index: 9;
+}
+
+.page4 h1{
+    font-size:7vw;
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+
+.blogs{
+    display:inline-flex;
+    width:100%;
+    max-height:500px;
+    flex-direction:row;
+    justify-content:space-around;
+
+}
+ 
+.cards{
+    width: 100px;
+    margin:10px;
+    padding:20px;   
+    height:100px;
+    font-size: 20pt;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.card-text{
+    color: #000;
+}
+
+#more_button{
+    width:200px;
+    background-color: lightblue;
+    color: white;
+    border-radius: 10px;
+    margin-left: 45%;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+#readmore{
+    margin-top:-0.1em;
+    height:24px;
+    width:24px;  
+}
+
+img{
+    height: 200px;
+    width: 100px;
+}
+
+.page5 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 4vw 0;
+}
+
+.page5 h1{
+    font-size:7vw;
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    padding-left: 4.5vw;
+}
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+
+    border-bottom: 1px solid #38383864;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #EDBFFF;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+.elem  h2{
+    color: #000;
+}
